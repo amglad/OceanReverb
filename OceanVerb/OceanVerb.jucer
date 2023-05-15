@@ -7,8 +7,6 @@
   <MAINGROUP id="D9udc8" name="OceanVerb">
     <GROUP id="{5428AE1D-4CCB-DD71-6CB0-D0E686ECE6C9}" name="Source">
       <GROUP id="{F72F235E-32F2-7E52-E867-A192DE81887F}" name="BinaryData">
-        <FILE id="y9t0dX" name="Side angle, 12 feet up-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/Side angle, 12 feet up-96k.wav"/>
         <FILE id="KXONJ0" name="waves.png" compile="0" resource="1" file="Source/BinaryData/waves.png"/>
       </GROUP>
       <GROUP id="{DA29F9AE-ACD6-A689-6607-2E27F670B884}" name="Biquads">
