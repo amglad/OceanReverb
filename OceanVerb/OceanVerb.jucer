@@ -6,28 +6,16 @@
               pluginVST3Category="Reverb" splashScreenColour="Light">
   <MAINGROUP id="D9udc8" name="OceanVerb">
     <GROUP id="{5428AE1D-4CCB-DD71-6CB0-D0E686ECE6C9}" name="Source">
+      <GROUP id="{F72F235E-32F2-7E52-E867-A192DE81887F}" name="BinaryData">
+        <FILE id="y9t0dX" name="Side angle, 12 feet up-96k.wav" compile="0"
+              resource="1" file="Source/BinaryData/Side angle, 12 feet up-96k.wav"/>
+        <FILE id="KXONJ0" name="waves.png" compile="0" resource="1" file="Source/BinaryData/waves.png"/>
+      </GROUP>
       <GROUP id="{DA29F9AE-ACD6-A689-6607-2E27F670B884}" name="Biquads">
         <FILE id="IFlLnM" name="BiquadHPF.cpp" compile="1" resource="0" file="Source/Biquads/BiquadHPF.cpp"/>
         <FILE id="vGBCCW" name="BiquadHPF.h" compile="0" resource="0" file="Source/Biquads/BiquadHPF.h"/>
         <FILE id="CAevjq" name="BiquadLPF.cpp" compile="1" resource="0" file="Source/Biquads/BiquadLPF.cpp"/>
         <FILE id="iA1z0P" name="BiquadLPF.h" compile="0" resource="0" file="Source/Biquads/BiquadLPF.h"/>
-      </GROUP>
-      <GROUP id="{E24F101B-CBE7-1C12-AFB1-EDCAC05CF077}" name="BinaryData">
-        <FILE id="WhnVZZ" name="waves.png" compile="0" resource="1" file="Source/BinaryData/waves.png"/>
-        <FILE id="jFyRjb" name="6 feet back, 6 feet up, speaker head-on-96k.wav"
-              compile="0" resource="1" file="Source/BinaryData/6 feet back, 6 feet up, speaker head-on-96k.wav"/>
-        <FILE id="h8d4On" name="12 feet back, 6 feet up, spaced-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/12 feet back, 6 feet up, spaced-96k.wav"/>
-        <FILE id="r4gJr7" name="18 feet back, 6 feet up-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/18 feet back, 6 feet up-96k.wav"/>
-        <FILE id="ge972w" name="18 feet back, 12 feet up-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/18 feet back, 12 feet up-96k.wav"/>
-        <FILE id="dqxK7n" name="Side angle, 6 feet up-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/Side angle, 6 feet up-96k.wav"/>
-        <FILE id="oYnL9U" name="Side angle, 12 feet up-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/Side angle, 12 feet up-96k.wav"/>
-        <FILE id="URbsNE" name="Side angle, 16 feet up-96k.wav" compile="0"
-              resource="1" file="Source/BinaryData/Side angle, 16 feet up-96k.wav"/>
       </GROUP>
       <FILE id="VSVr9n" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

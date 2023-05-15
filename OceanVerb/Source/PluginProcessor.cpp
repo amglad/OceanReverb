@@ -233,9 +233,10 @@ void OceanVerbAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
     
-//    auto currentState = state.copyState();
-//    std::unique_ptr<juce::XmlElement> xml(currentState.createXml());
-//    copyXmlToBinary(*xml, destData);
+    std::unique_ptr<juce::XmlElement> xml (new juce::XmlElement ("Params"));
+     xml->setAttribute("LPF", (double) lpfValue);
+     xml->setAttribute("HPF", (double) hpfValue);
+     xml->setAttribute("Mix", (double) mix);
 }
 
 void OceanVerbAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
@@ -243,11 +244,13 @@ void OceanVerbAudioProcessor::setStateInformation (const void* data, int sizeInB
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
     
-//    std::unique_ptr<juce::XmlElement> xml (getXmlFromBinary(data, sizeInBytes));
-//    if (xml && xml->hasTagName(state.state.getType()))
-//    {
-//        state.replaceState(juce::ValueTree::fromXml(*xml));
-//    }
+    std::unique_ptr<juce::XmlElement> xmlState (getXmlFromBinary (data, sizeInBytes));
+    if (xmlState.get() != nullptr)
+        if (xmlState->hasTagName ("Params")) {
+            lpfValue = xmlState->getDoubleAttribute ("LPF", 500.0);
+            hpfValue = xmlState->getDoubleAttribute ("HPF", 6000.0);
+            mix = xmlState->getDoubleAttribute ("Mix", 50.0);
+        }
 }
 
 void OceanVerbAudioProcessor::setMix(float mixValue)
